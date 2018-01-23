@@ -83,7 +83,7 @@ function merge(left, right) {
 
 function Benchmarking(array) {
   let start = new Date();
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 20; i++) {
     let mergeCopy = array.slice(0);
 
     mergeSort(mergeCopy);
@@ -93,7 +93,7 @@ function Benchmarking(array) {
   console.log(end - start);
 
   start = new Date();
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 20; i++) {
     let bubbleCopy = array.slice(0);
 
     bubbleSort(bubbleCopy);
@@ -103,7 +103,7 @@ function Benchmarking(array) {
   console.log(end - start);
 
   start = new Date();
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 20; i++) {
     let insertionCopy = array.slice(0);
 
     insertionSort(insertionCopy);
@@ -112,7 +112,7 @@ function Benchmarking(array) {
   console.log("INSERTION TIME");
   console.log(end - start);
 }
-let array = new Array(1000);
+let array = new Array(20000);
 for (let i = 0; i < array.length; i++) {
   array[i] = Math.random() * 40;
 }
