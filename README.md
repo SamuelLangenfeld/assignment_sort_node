@@ -44,7 +44,7 @@ insertionSort([1, 3, 7, 2, 5, -1, -2]);
 ```
 let bubbleSort = (arr) => {
   let l = arr.length
-  for(let i = 0; i <= l-1; i++){ //makes the n loop run a bunch of times, and when we run it arr.length times it will always be enough times 
+  for(let i = 0; i <= l-1; i++){ //makes the n loop run a bunch of times, and when we run it arr.length times it will always be enough times
     for(let n = 0; n <= l - 2; n++){
       let first = arr[n+1]
       let second = arr[n]
@@ -58,4 +58,34 @@ let bubbleSort = (arr) => {
 }
 
 bubbleSort( [1,3,7,2,5,8,9,-1,0,5,10,1000,82349287,9213849387,923498732,1982739,89234,28374,298374] )
+```
+
+## Quick Sort
+
+```
+// array to sort
+var array = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
+
+// basic implementation (pivot is the first element of the array)
+function quicksortBasic(array) {
+  if(array.length < 2) {
+    return array;
+  }
+
+  var pivot = array[0];
+  var lesser = [];
+  var greater = [];
+
+  for(var i = 1; i < array.length; i++) {
+    if(array[i] < pivot) {
+      lesser.push(array[i]);
+    } else {
+      greater.push(array[i]);
+    }
+  }
+
+  return quicksortBasic(lesser).concat(pivot, quicksortBasic(greater));
+}
+
+quicksortBasic(array)
 ```
